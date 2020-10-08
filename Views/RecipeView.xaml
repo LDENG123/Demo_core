@@ -1,0 +1,385 @@
+﻿<UserControl x:Class="Demo_core.Views.RecipeView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Demo_core.Views"
+      xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <materialDesign:Card
+  Background="{DynamicResource MaterialDesignBackground}">
+            <StackPanel>
+                <Expander
+      HorizontalAlignment="Stretch"
+      Header="Recipe  Detail">
+                    <StackPanel
+        Orientation="Vertical"
+        TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+        Margin="24,8,24,16">
+                        <DataGrid
+                            Grid.Row="0"
+  Margin="0 8 0 0"
+  ItemsSource="{Binding XmlItems0}"
+  CanUserSortColumns="True"
+  CanUserAddRows="False"
+  AutoGenerateColumns="False"
+  materialDesign:DataGridAssist.CellPadding="13 8 8 8"
+  materialDesign:DataGridAssist.ColumnHeaderPadding="8">
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn
+      Binding="{Binding ID}"
+      Header="ID" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding Date}"
+      Header="Name" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding Message}"
+      Header="CreatTime"
+      />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </Expander>
+                <Border
+      Background="{DynamicResource MaterialDesignDivider}"
+      Height="1"
+      HorizontalAlignment="Stretch"
+      SnapsToDevicePixels="True" />
+                <Expander
+      HorizontalAlignment="Stretch"
+      Header="Recipe Process Parameters">
+                    <StackPanel
+        Orientation="Vertical"
+        TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+        Margin="24,8,24,16">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <DataGrid
+                            Grid.Row="0"
+  Margin="0 8 0 0"
+  ItemsSource="{Binding XmlItems1}"
+  CanUserSortColumns="True"
+  CanUserAddRows="False"
+  AutoGenerateColumns="False"
+  materialDesign:DataGridAssist.CellPadding="13 8 8 8"
+  materialDesign:DataGridAssist.ColumnHeaderPadding="8">
+                                <DataGrid.Columns>
+
+                                    <DataGridTextColumn
+      Binding="{Binding Temperature0}"
+      Header="Temperature0" />
+                                    <materialDesign:DataGridTextColumn
+      Binding="{Binding Temperature1}"
+      Header="Temperature1" />
+                                    <materialDesign:DataGridTextColumn
+      Binding="{Binding Temperature2}"
+      Header="Temperature2"
+      />
+                                    <DataGridTextColumn
+      Binding="{Binding Temperature3}"
+      Header="Temperature3" />
+                                    <materialDesign:DataGridTextColumn
+      Binding="{Binding Temperature4}"
+      Header="Temperature4" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <DataGrid
+                            Grid.Row="1"
+  Margin="0 8 0 0"
+  ItemsSource="{Binding XmlItems1}"
+  CanUserSortColumns="True"
+  CanUserAddRows="False"
+  AutoGenerateColumns="False"
+  materialDesign:DataGridAssist.CellPadding="13 8 8 8"
+  materialDesign:DataGridAssist.ColumnHeaderPadding="8">
+                                <DataGrid.Columns>
+
+                                    <DataGridTextColumn
+      Binding="{Binding Pressure0}"
+      Header="Pressure0" />
+                                    <materialDesign:DataGridTextColumn
+      Binding="{Binding Pressure1}"
+      Header="Pressure1" />
+                                    <materialDesign:DataGridTextColumn
+      Binding="{Binding Pressure2}"
+      Header="Pressure2"
+      />
+                                    <DataGridTextColumn
+      Binding="{Binding Pressure3}"
+      Header="Pressure3" />
+                                    <materialDesign:DataGridTextColumn
+      Binding="{Binding Pressure4}"
+      Header="Pressure4" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <DataGrid
+                            Grid.Row="2"
+  Margin="0 8 0 0"
+  ItemsSource="{Binding XmlItems1}"
+  CanUserSortColumns="True"
+  CanUserAddRows="False"
+  AutoGenerateColumns="False"
+  materialDesign:DataGridAssist.CellPadding="13 8 8 8"
+  materialDesign:DataGridAssist.ColumnHeaderPadding="8">
+                                <DataGrid.Columns>
+
+                                    <DataGridTextColumn
+      Binding="{Binding SynchronousDistance0}"
+      Header="SynchronousDistance0" />
+                                    <materialDesign:DataGridTextColumn
+      Binding="{Binding SynchronousDistance1}"
+      Header="SynchronousDistance1" />
+                                    <materialDesign:DataGridTextColumn
+      Binding="{Binding SynchronousDistance2}"
+      Header="SynchronousDistance2"
+      />
+                                    <DataGridTextColumn
+      Binding="{Binding SynchronousDistance3}"
+      Header="SynchronousDistance3" />
+                                    <materialDesign:DataGridTextColumn
+      Binding="{Binding SynchronousDistance4}"
+      Header="SynchronousDistance4" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <DataGrid
+                            Grid.Row="3"
+  Margin="0 8 0 0"
+  ItemsSource="{Binding XmlItems1}"
+  CanUserSortColumns="True"
+  CanUserAddRows="False"
+  AutoGenerateColumns="False"
+  materialDesign:DataGridAssist.CellPadding="13 8 8 8"
+  materialDesign:DataGridAssist.ColumnHeaderPadding="8">
+                                <DataGrid.Columns>
+
+                                    <DataGridTextColumn
+      Binding="{Binding SynchronousSpeed0}"
+      Header="SynchronousSpeed0" />
+                                    <materialDesign:DataGridTextColumn
+      Binding="{Binding SynchronousSpeed1}"
+      Header="SynchronousSpeed1" />
+                                    <materialDesign:DataGridTextColumn
+      Binding="{Binding SynchronousSpeed2}"
+      Header="SynchronousSpeed2"
+      />
+                                    <DataGridTextColumn
+      Binding="{Binding SynchronousSpeed3}"
+      Header="SynchronousSpeed3" />
+                                    <materialDesign:DataGridTextColumn
+      Binding="{Binding SynchronousSpeed4}"
+      Header="SynchronousSpeed4" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </StackPanel>
+                </Expander>
+                <Border
+      Background="{DynamicResource MaterialDesignDivider}"
+      Height="1"
+      HorizontalAlignment="Stretch"
+      SnapsToDevicePixels="True" />
+                <Expander
+      HorizontalAlignment="Stretch"
+      Header="Recipe Asix Detail">
+                    <StackPanel
+        Orientation="Vertical"
+        TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+        Margin="24,8,24,16">
+                        <DataGrid
+  Margin="0 8 0 0"
+  ItemsSource="{Binding XmlItems}"
+  CanUserSortColumns="True"
+  CanUserAddRows="False"
+  AutoGenerateColumns="False"
+  materialDesign:DataGridAssist.CellPadding="13 8 8 8"
+  materialDesign:DataGridAssist.ColumnHeaderPadding="8">
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn
+      Binding="{Binding ID}"
+      Header="ID" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding POsition0}"
+      Header="POsition0" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding Speeed0}"
+      Header="Speed0"
+      />
+                                <DataGridTextColumn
+      Binding="{Binding POsition1}"
+      Header="POsition1" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding Speeed1}"
+      Header="Speed1" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding POsition2}"
+      Header="POsition2"
+      />
+                                <DataGridTextColumn
+      Binding="{Binding Speeed2}"
+      Header="Speed2" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding POsition3}"
+      Header="POsition3" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding Speeed3}"
+      Header="Speed3"
+     />
+                                <DataGridTextColumn
+      Binding="{Binding POsition4}"
+      Header="POsition4" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding Speeed4}"
+      Header="Speed4" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding POsition5}"
+      Header="POsition5"
+     />
+                                <DataGridTextColumn
+      Binding="{Binding Speeed5}"
+      Header="Speed5" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding POsition6}"
+      Header="POsition6"
+  />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding Speeed6}"
+      Header="Speed6"
+     />
+                                <DataGridTextColumn
+      Binding="{Binding POsition7}"
+      Header="POsition7" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding Speeed7}"
+      Header="Speed7" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding POsition8}"
+      Header="POsition8"
+     />
+                                <DataGridTextColumn
+      Binding="{Binding Speeed8}"
+      Header="Speed8"
+    />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding POsition9}"
+      Header="POsition9"
+      EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}" />
+                                <materialDesign:DataGridTextColumn
+      Binding="{Binding Speeed9}"
+      Header="Speed9"
+      />
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </materialDesign:Card>
+        <GroupBox Header="Recipe Management"
+                  FontSize="18" Grid.Column="1" 
+                  Margin="5"
+                   Style="{DynamicResource MaterialDesignGroupBox}"
+                  
+                   materialDesign:ShadowAssist.ShadowDepth="Depth3">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--<Label Content="数据配方" FontSize="25" HorizontalAlignment="Center"/>-->
+                <TextBox Text="{Binding ElementName=FileNameList,Path=SelectedValue}"
+                        
+                         Grid.Row="1" FontSize="20" Height="40" 
+                         materialDesign:HintAssist.Hint="请输入名称"/>
+                <ComboBox ItemsSource="{Binding Ts }" 
+                         
+                          SelectedItem="{Binding Path =Date}" 
+                          SelectedIndex="{Binding  Selectindex}" 
+                          
+                          Grid.Row="2" FontSize="20" IsEditable="False" BorderThickness="1" BorderBrush="Black" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="DropDownOpened">
+                            <i:InvokeCommandAction Command="{Binding RecipeCbxDropDownOpened}"
+                                                   CommandParameter="Binding RelativeSource={RelativeSource Self}"/>
+                        </i:EventTrigger>
+                        <i:EventTrigger EventName="DropDownClosed">
+                            <i:InvokeCommandAction Command="{Binding RecipeCbxDropDownClosed}"/>
+                        </i:EventTrigger>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding RecipeCbxSelectionChanged}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </ComboBox>
+
+                <StackPanel Orientation="Horizontal"  Grid.Row="3" HorizontalAlignment="Center">
+                    <Button Content="新建" Width="100" Height="40" Margin="5"
+                            FontSize="20" 
+                           
+                            Style="{StaticResource MaterialDesignRaisedDarkButton}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding NewCreatFile}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                    <Button Content="保存" Width="100" Height="40" Margin="5" FontSize="20"   Style="{StaticResource MaterialDesignRaisedDarkButton}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding SaveDateFile}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                    <Button Content="装载" Width="100" Height="40" Margin="5" FontSize="20"   Style="{StaticResource MaterialDesignRaisedDarkButton}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding LoadXmlFile}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                    <Button Content="删除" Width="100" Height="40" Margin="5" FontSize="20"   Style="{StaticResource MaterialDesignRaisedDarkButton}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding DeleteXmlFile}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                </StackPanel>
+
+                <ListView   Name="FileNameList" ItemsSource="{Binding Getfie}" 
+                           Grid.Row="4" Grid.RowSpan="4" FontSize="20"
+                            SelectedValuePath="@Header">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn DisplayMemberBinding="{Binding ID}" Header="编号" Width="100"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Date}" Header="名称" Width="200"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Data}" Header="时间" Width="100"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

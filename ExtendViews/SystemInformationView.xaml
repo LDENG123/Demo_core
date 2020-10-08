@@ -1,0 +1,65 @@
+﻿<Window x:Class="Demo_core.ExtendViews.SystemInformationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Icon="E:\ACSC\Core_Demo\Demo_core\Images\gears.png "
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         SnapsToDevicePixels="True" MaxWidth="430" MaxHeight="400"
+          WindowStyle="SingleBorderWindow" ResizeMode="NoResize"   >
+    <Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="0">
+              
+            </DockPanel>
+            <Thumb Grid.Row="0" Opacity="0" Background="Transparent" Foreground="{x:Null}"  />
+            <DockPanel Grid.Row="0">
+                <StackPanel >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="E:\ACSC\Core_Demo\Demo_core\Images\gears.png " HorizontalAlignment="Left" Grid.Column="0"></Image>
+                        <Label Content="System Information"   Grid.Column="1" ></Label>
+                    </Grid>
+                </StackPanel>
+            </DockPanel>
+            <Border Grid.Row="1" >
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                    <StackPanel Height="20"></StackPanel>
+                    <StackPanel Margin="36,0,36,0" Orientation="Horizontal" >
+                        <StackPanel Margin="0,0,12,0">
+                            <Label  >Operating System:</Label>
+                            <Label >.Net Framework Version:</Label>
+                            <Label  Margin="0,12,0,0">Windows Username:</Label>
+                            <Label  >Domainname:</Label>
+                            <Label  Margin="0,12,0,0">RAM:</Label>
+                            <Label  >Processor:</Label>
+                            <Label  Margin="0,12,0,0">IP Address (LAN):</Label>
+                            <Label  >IP Address (WAN):</Label>
+                            <Label  Margin="0,12,0,0">Application Version:</Label>
+                        </StackPanel>
+                        <StackPanel>
+                            <Label  Name="SystemInfoWindowOperatingSystem"  >---</Label>
+                            <Label  Name="SystemInfoWindowNetFrameworkVersion">---</Label>
+                            <Label  Name="SystemInfoWindowWindowsUserName" Margin="0,12,0,0">---</Label>
+                            <Label  Name="SystemInfoWindowDomainName">---</Label>
+                            <Label  Name="SystemInfoWindowRam" Margin="0,12,0,0">---</Label>
+                            <Label  Name="SystemInfoWindowProcessor">---</Label>
+                            <Label  Name="SystemInfoWindowLanIp" Margin="0,12,0,0">---</Label>
+                            <Label  Name="SystemInfoWindowWanIp">---</Label>
+                            <Label Name="SystemInfoWindowRubyVersion" Margin="0,12,0,0">---</Label>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Height="20"></StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

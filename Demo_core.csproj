@@ -1,0 +1,110 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Caliburn.Micro" Version="4.0.136-rc" />
+    <PackageReference Include="LiveCharts.Wpf.NetCore3" Version="0.9.7" />
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="MahApps.Metro" Version="2.1.0" />
+    <PackageReference Include="MahApps.Metro.Resources" Version="0.6.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.2.0-ci1494" />
+    <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.0-preview.7.20365.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.0-preview.7.20365.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="2.0.0-preview1-final" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0-rc.1.20451.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0-rc.1.20451.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.0-preview.6.20305.6" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.19" />
+    <PackageReference Include="NLog" Version="4.7.4" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.6.5" />
+    <PackageReference Include="Panuon.UI.Silver" Version="2.0.0.9-alpha" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ACS.SPiiPlusNET">
+      <HintPath>E:\SPiiPlus .NET Library\.NET Library Demo\x64\Release\ACS.SPiiPlusNET.dll</HintPath>
+    </Reference>
+    <Reference Include="AdvMotAPI">
+      <HintPath>C:\Program Files (x86)\Advantech\Common Motion\Public\AdvMotAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.ActProgTypeLib">
+      <HintPath>D:\mx\Act\Samples\Vcs.NET\Sample\bin\Debug\AxInterop.ActProgTypeLib.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="AxInterop.ActUtlTypeLib">
+      <HintPath>D:\mx\Act\Samples\Vcs.NET\Sample\bin\Debug\AxInterop.ActUtlTypeLib.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="EtherCATIO">
+      <HintPath>C:\Program Files (x86)\Advantech\Common Motion\Public\EtherCATIO.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ActProgTypeLib">
+      <HintPath>D:\mx\Act\Samples\Vcs.NET\Sample\bin\Debug\Interop.ActProgTypeLib.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Interop.ActUtlTypeLib">
+      <HintPath>D:\mx\Act\Samples\Vcs.NET\Sample\bin\Debug\Interop.ActUtlTypeLib.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>D:\B7\Wpf_notice - 副本\WpfApp1\bin\Debug\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>D:\B7\Wpf_notice - 副本\WpfApp1\bin\Debug\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>D:\B7\Wpf_notice - 副本\WpfApp1\bin\Debug\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>D:\B7\Wpf_notice - 副本\WpfApp1\bin\Debug\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Language-CH.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Language-CH.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Language-EN.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Language-EN.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Language-CH.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language-CH.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Language-EN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language-EN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\123.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="NLog.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
